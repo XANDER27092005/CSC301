@@ -123,8 +123,8 @@ public class email extends javax.swing.JFrame {
 String subject=jTextField2.getText();        // TODO add your handling code here:
 String receiver=jTextField1.getText();      
 String body=jTextArea1.getText();
-String senderEmail = "csccbtproject@gmail.com"; 
-        String senderPassword = "lrvmaigxezgdyhxb"; 
+String senderEmail = "michaeliloba.2709@gmail.com"; 
+        String senderPassword = "ilvvfcrtdqoqkjwy"; 
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
         props.put("mail.smtp.starttls.enable", "true");

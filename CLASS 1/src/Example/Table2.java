@@ -60,6 +60,11 @@ public class Table2 extends javax.swing.JFrame {
         });
 
         jButton1.setText("jButton1");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -79,8 +84,23 @@ public class Table2 extends javax.swing.JFrame {
         });
 
         jButton3.setText("Delete");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setText("Clear");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
 
         jButton5.setText("Browse");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -223,6 +243,49 @@ try{
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+String name = jTextField1.getText();
+String age = jTextField2.getText();
+String sex = jTextField3.getText();
+String level = jTextField4.getText();
+String data[] = {name, age, sex, level};
+DefaultTableModel td = (DefaultTableModel)jTable1.getModel();
+td.addRow(data);        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+      
+
+    
+ 
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        
+        
+            
+        
+        
+        
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        /*int column = jTable1.getColumnModel().getColumnIndex(evt.getX());
+        int row = evt.getY()/jTable1.getRowHeight();
+
+        if(row<jTable1.getRowCount() && row >= 0 && column < jTable1.getColumnCount() && column >= 0){
+            Object rowValue = jTable1.getValueAt(row, column);
+            DefaultTableModel tableModel = (DefaultTableModel)this.jTable1.getModel();
+            int[] selectedRows = jTable1.getSelectedRows();
+            for(int i = 0; i<selectedRows.length;i++) tableModel.removeRow(selectedRows[i]);
+        }*/
+
+
+// TODO add your handling code here:
+    }//GEN-LAST:event_jButton3MouseClicked
 
     /**
      * @param args the command line arguments

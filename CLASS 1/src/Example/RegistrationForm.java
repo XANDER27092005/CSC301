@@ -155,6 +155,12 @@ public class RegistrationForm extends javax.swing.JFrame {
             }
         });
 
+        jTextField3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField3ActionPerformed(evt);
+            }
+        });
+
         buttonGroup1.add(jRadioButton1);
         jRadioButton1.setText("Male");
 
@@ -476,6 +482,7 @@ try{
             int rs=ps.executeUpdate();
             JOptionPane.showMessageDialog(rootPane, surname +" "+ firstname+" records inserted");
 }catch(Exception e){
+    JOptionPane.showMessageDialog(rootPane, e);
 }
 
 // TODO add your handling code here:
@@ -545,6 +552,10 @@ Class.forName("com.mysql.cj.jdbc.Driver");
                 }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField3ActionPerformed
 
     /**
      * @param args the command line arguments
