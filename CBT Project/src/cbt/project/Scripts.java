@@ -4,6 +4,7 @@
  */
 package cbt.project;
 import static cbt.project.login.matno;
+import static cbt.project.ADMIN1.Matno;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -24,6 +25,9 @@ public class Scripts extends javax.swing.JFrame {
     public Scripts() {
         initComponents();
         viewScript(matno);
+        viewScript(Matno);
+        System.out.println("matno: " + matno);
+        System.out.println("Matno: " + Matno);
     }
     
     private void viewScript(String matno){
@@ -67,27 +71,13 @@ public class Scripts extends javax.swing.JFrame {
             String[] yourAnswer = loadedYourAnswer.toArray(String[]::new);
             
 
-            // Display the first question in a JTextArea
+            
             String Question =""; 
-            /*String OptionA = "";
-            String OptionB = "";
-            String OptionC = "";
-            String OptionD = "";
-            String Answer = "";
-            String YourAnswer = "";
-            String text = "";
-            */
+            
            
             for (int i = 0; i < questions.length; i++) {
                 //System.out.println((i + 1) + ". " + questionsArray[i]);
                 Question = Question + "Question " + (i+1) + " : "+ questions[i] +"\n" + "A. " + optionA[i] + "\n" + "B. " + optionB[i] + "\n" + "C. " + optionC[i] + "\n" + "D. " + optionD[i] + "\n" + "The answer is " + answer[i] + "\n" + "Your answer: " + yourAnswer[i] + "\n\n";
-                /*OptionA = OptionA + "A. " + optionA[i] + "\n";
-                OptionB = OptionB + "B. " + optionB[i] + "\n";
-                OptionC = OptionC + "C. " + optionC[i] + "\n";
-                OptionD = OptionD + "D. " + optionD[i] + "\n";
-                Answer = Answer + "The answer is " + answer[i] + "\n";
-                YourAnswer = YourAnswer + "Your answer: " + yourAnswer[i] + "\n";
-                text = text + Question + OptionA + OptionB + OptionC + OptionD + Answer + YourAnswer;*/
                 jTextArea1.setText(Question);
             }
             
@@ -108,7 +98,6 @@ public class Scripts extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
@@ -119,10 +108,6 @@ public class Scripts extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTextArea1);
 
         jMenu1.setText("File");
-
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_S, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        jMenuItem1.setText("Save");
-        jMenu1.add(jMenuItem1);
 
         jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItem2.setText("Print");
@@ -201,7 +186,6 @@ public class Scripts extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
